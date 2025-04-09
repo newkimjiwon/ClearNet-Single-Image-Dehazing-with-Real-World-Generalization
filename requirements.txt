@@ -1,0 +1,26 @@
+# ClearNet: Single Image Dehazing with Real-World Generalization
+# 기본 환경: CUDA 11.2, RTX 3090
+
+# PyTorch 및 관련 라이브러리
+pytorch==1.12.1
+torchvision==0.13.1
+torchaudio==0.12.1
+cudatoolkit=11.3
+
+# 데이터 처리 및 시각화
+numpy>=1.20.0
+matplotlib>=3.4.0
+pillow>=8.0.0
+opencv-python>=4.5.0
+scikit-image>=0.18.0
+scikit-learn>=0.24.0
+
+# 유틸리티
+tqdm>=4.60.0
+tensorboard>=2.5.0
+pyyaml>=5.4.0
+jupyter>=1.0.0
+
+# 딥러닝 관련
+torchsummary>=1.5.0
+albumentations>=1.0.0  # 데이터 증강을 위한 라이브러리

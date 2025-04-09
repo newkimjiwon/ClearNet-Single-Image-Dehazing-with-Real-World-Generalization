@@ -1,0 +1,39 @@
+{
+    "model": {
+        "name": "ClearNet",
+        "type": "unsupervised",
+        "in_channels": 3,
+        "features": [64, 128, 256, 512],
+        "use_attention": true
+    },
+    "training": {
+        "batch_size": 8,
+        "num_epochs": 150,
+        "learning_rate": 0.0001,
+        "weight_decay": 1e-5,
+        "save_interval": 5,
+        "scheduler_step_size": 30,
+        "scheduler_gamma": 0.5
+    },
+    "loss": {
+        "dcp_weight": 0.5,
+        "cc_weight": 0.1,
+        "tv_weight": 1e-6,
+        "dcp_patch_size": 15
+    },
+    "data": {
+        "hazy_train_path": "./data/hazy/",
+        "train_data_path": "./data_set/train/",
+        "val_data_path": "./data_set/val/",
+        "test_data_path": "./data_set/test/",
+        "real_test_path": "./data/real_world/",
+        "img_size": 256,
+        "use_augmentation": true
+    },
+    "paths": {
+        "checkpoint_dir": "./models/checkpoints/",
+        "output_dir": "./path/output/",
+        "log_dir": "./utils/logs/"
+    },
+    "device": "cuda"
+}
